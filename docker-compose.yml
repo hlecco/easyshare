@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  syncthing:
+    image: syncthing/syncthing
+    network_mode: host
+    volumes:
+      - ./syncthing:/var/syncthing
+
+  sauth:
+    build: sauth
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./syncthing/Sync:/var/share
+    environment:
+      - USERNAME=admin
+      - PASSWORD=123

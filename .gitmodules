@@ -1,0 +1,3 @@
+[submodule "sauth/sauth"]
+	path = sauth/sauth
+	url = https://github.com/Granitosaurus/sauth
